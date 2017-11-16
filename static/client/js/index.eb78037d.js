@@ -41,7 +41,7 @@ router.onReady(function () {
 
 
 
-var Index = function () { return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 57)); };
+var Index = function () { return __webpack_require__.e/* import() */(3).then(__webpack_require__.bind(null, 57)); };
 var createApp = function () {
     var store = Object(__WEBPACK_IMPORTED_MODULE_1__store__["a" /* createStore */])();
     var router = Object(__WEBPACK_IMPORTED_MODULE_2__pages__["a" /* createRouter */])();
@@ -167,7 +167,7 @@ var mutations = Object.assign({}, {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router__ = __webpack_require__(8);
 
 
-var App = function () { return __webpack_require__.e/* import() */(3).then(__webpack_require__.bind(null, 54)); };
+var App = function () { return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 54)); };
 var Test = function () { return __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, 55)); };
 var Home = function () { return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 56)); };
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_router__["default"]);

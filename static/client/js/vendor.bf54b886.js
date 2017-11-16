@@ -91,7 +91,7 @@
 /******/ 		if (__webpack_require__.nc) {
 /******/ 			script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 		}
-/******/ 		script.src = __webpack_require__.p + "" + chunkId + ".js";
+/******/ 		script.src = __webpack_require__.p + "" + chunkId + "." + {"0":"60f7f5d2","1":"9cd5ffb6","2":"56a122a1","3":"123cf761","4":"eb78037d"}[chunkId] + ".js";
 /******/ 		var timeout = setTimeout(onScriptComplete, 120000);
 /******/ 		script.onerror = script.onload = onScriptComplete;
 /******/ 		function onScriptComplete() {
@@ -147,7 +147,7 @@
 /******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 16);
+/******/ 	return __webpack_require__(__webpack_require__.s = 15);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -11176,7 +11176,7 @@ return Vue$3;
 
 })));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5), __webpack_require__(18).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5), __webpack_require__(17).setImmediate))
 
 /***/ }),
 /* 3 */
@@ -11760,7 +11760,7 @@ ModuleCollection.prototype.register = function register (path, rawModule, runtim
     var this$1 = this;
     if ( runtime === void 0 ) runtime = true;
 
-  if (true) {
+  if (false) {
     assertRawModule(path, rawModule);
   }
 
@@ -11789,7 +11789,7 @@ ModuleCollection.prototype.unregister = function unregister (path) {
 };
 
 function update (path, targetModule, newModule) {
-  if (true) {
+  if (false) {
     assertRawModule(path, newModule);
   }
 
@@ -11800,7 +11800,7 @@ function update (path, targetModule, newModule) {
   if (newModule.modules) {
     for (var key in newModule.modules) {
       if (!targetModule.getChild(key)) {
-        if (true) {
+        if (false) {
           console.warn(
             "[vuex] trying to add a new module '" + key + "' on hot reloading, " +
             'manual reload is needed'
@@ -11871,7 +11871,7 @@ var Store = function Store (options) {
     install(window.Vue);
   }
 
-  if (true) {
+  if (false) {
     assert(Vue, "must call Vue.use(Vuex) before creating a store instance.");
     assert(typeof Promise !== 'undefined', "vuex requires a Promise polyfill in this browser.");
     assert(this instanceof Store, "Store must be called with the new operator.");
@@ -11935,7 +11935,7 @@ prototypeAccessors.state.get = function () {
 };
 
 prototypeAccessors.state.set = function (v) {
-  if (true) {
+  if (false) {
     assert(false, "Use store.replaceState() to explicit replace store state.");
   }
 };
@@ -11952,7 +11952,7 @@ Store.prototype.commit = function commit (_type, _payload, _options) {
   var mutation = { type: type, payload: payload };
   var entry = this._mutations[type];
   if (!entry) {
-    if (true) {
+    if (false) {
       console.error(("[vuex] unknown mutation type: " + type));
     }
     return
@@ -11965,8 +11965,7 @@ Store.prototype.commit = function commit (_type, _payload, _options) {
   this._subscribers.forEach(function (sub) { return sub(mutation, this$1.state); });
 
   if (
-    "development" !== 'production' &&
-    options && options.silent
+    false
   ) {
     console.warn(
       "[vuex] mutation type: " + type + ". Silent option has been removed. " +
@@ -11986,7 +11985,7 @@ Store.prototype.dispatch = function dispatch (_type, _payload) {
   var action = { type: type, payload: payload };
   var entry = this._actions[type];
   if (!entry) {
-    if (true) {
+    if (false) {
       console.error(("[vuex] unknown action type: " + type));
     }
     return
@@ -12010,7 +12009,7 @@ Store.prototype.subscribeAction = function subscribeAction (fn) {
 Store.prototype.watch = function watch (getter, cb, options) {
     var this$1 = this;
 
-  if (true) {
+  if (false) {
     assert(typeof getter === 'function', "store.watch only accepts a function.");
   }
   return this._watcherVM.$watch(function () { return getter(this$1.state, this$1.getters); }, cb, options)
@@ -12029,7 +12028,7 @@ Store.prototype.registerModule = function registerModule (path, rawModule, optio
 
   if (typeof path === 'string') { path = [path]; }
 
-  if (true) {
+  if (false) {
     assert(Array.isArray(path), "module path must be a string or an Array.");
     assert(path.length > 0, 'cannot register the root module by using registerModule.');
   }
@@ -12045,7 +12044,7 @@ Store.prototype.unregisterModule = function unregisterModule (path) {
 
   if (typeof path === 'string') { path = [path]; }
 
-  if (true) {
+  if (false) {
     assert(Array.isArray(path), "module path must be a string or an Array.");
   }
 
@@ -12198,7 +12197,7 @@ function makeLocalContext (store, namespace, path) {
 
       if (!options || !options.root) {
         type = namespace + type;
-        if ("development" !== 'production' && !store._actions[type]) {
+        if (false) {
           console.error(("[vuex] unknown local action type: " + (args.type) + ", global type: " + type));
           return
         }
@@ -12215,7 +12214,7 @@ function makeLocalContext (store, namespace, path) {
 
       if (!options || !options.root) {
         type = namespace + type;
-        if ("development" !== 'production' && !store._mutations[type]) {
+        if (false) {
           console.error(("[vuex] unknown local mutation type: " + (args.type) + ", global type: " + type));
           return
         }
@@ -12298,7 +12297,7 @@ function registerAction (store, type, handler, local) {
 
 function registerGetter (store, type, rawGetter, local) {
   if (store._wrappedGetters[type]) {
-    if (true) {
+    if (false) {
       console.error(("[vuex] duplicate getter key: " + type));
     }
     return
@@ -12315,7 +12314,7 @@ function registerGetter (store, type, rawGetter, local) {
 
 function enableStrictMode (store) {
   store._vm.$watch(function () { return this._data.$$state }, function () {
-    if (true) {
+    if (false) {
       assert(store._committing, "Do not mutate vuex store state outside mutation handlers.");
     }
   }, { deep: true, sync: true });
@@ -12334,7 +12333,7 @@ function unifyObjectStyle (type, payload, options) {
     type = type.type;
   }
 
-  if (true) {
+  if (false) {
     assert(typeof type === 'string', ("Expects string as the type, but found " + (typeof type) + "."));
   }
 
@@ -12343,7 +12342,7 @@ function unifyObjectStyle (type, payload, options) {
 
 function install (_Vue) {
   if (Vue && _Vue === Vue) {
-    if (true) {
+    if (false) {
       console.error(
         '[vuex] already installed. Vue.use(Vuex) should be called only once.'
       );
@@ -12418,7 +12417,7 @@ var mapGetters = normalizeNamespace(function (namespace, getters) {
       if (namespace && !getModuleByNamespace(this.$store, 'mapGetters', namespace)) {
         return
       }
-      if ("development" !== 'production' && !(val in this.$store.getters)) {
+      if (false) {
         console.error(("[vuex] unknown getter: " + val));
         return
       }
@@ -12483,7 +12482,7 @@ function normalizeNamespace (fn) {
 
 function getModuleByNamespace (store, helper, namespace) {
   var module = store._modulesNamespaceMap[namespace];
-  if ("development" !== 'production' && !module) {
+  if (false) {
     console.error(("[vuex] module namespace not found in " + helper + "(): " + namespace));
   }
   return module
@@ -12524,7 +12523,7 @@ function assert (condition, message) {
 }
 
 function warn (condition, message) {
-  if ("development" !== 'production' && !condition) {
+  if (false) {
     typeof console !== 'undefined' && console.warn(("[vue-router] " + message));
   }
 }
@@ -12635,7 +12634,7 @@ function resolveProps (route, config) {
     case 'boolean':
       return config ? route.params : undefined
     default:
-      if (true) {
+      if (false) {
         warn(
           false,
           "props in \"" + (route.path) + "\" is a " + (typeof config) + ", " +
@@ -12679,7 +12678,7 @@ function resolveQuery (
   try {
     parsedQuery = parse(query || '');
   } catch (e) {
-    "development" !== 'production' && warn(false, e.message);
+    "production" !== 'production' && warn(false, e.message);
     parsedQuery = {};
   }
   for (var key in extraQuery) {
@@ -13602,7 +13601,7 @@ function fillParams (
       (regexpCompileCache[path] = pathToRegexp_1.compile(path));
     return filler(params || {}, { pretty: true })
   } catch (e) {
-    if (true) {
+    if (false) {
       warn(false, ("missing param for " + routeMsg + ": " + (e.message)));
     }
     return ''
@@ -13654,7 +13653,7 @@ function addRouteRecord (
 ) {
   var path = route.path;
   var name = route.name;
-  if (true) {
+  if (false) {
     assert(path != null, "\"path\" is required in a route configuration.");
     assert(
       typeof route.component !== 'string',
@@ -13696,7 +13695,7 @@ function addRouteRecord (
     // Warn if route is named, does not redirect and has a default child route.
     // If users navigate to this route by name, the default child will
     // not be rendered (GH Issue #629)
-    if (true) {
+    if (false) {
       if (route.name && !route.redirect && route.children.some(function (child) { return /^\/?$/.test(child.path); })) {
         warn(
           false,
@@ -13745,7 +13744,7 @@ function addRouteRecord (
   if (name) {
     if (!nameMap[name]) {
       nameMap[name] = record;
-    } else if ("development" !== 'production' && !matchAs) {
+    } else if (false) {
       warn(
         false,
         "Duplicate named routes definition: " +
@@ -13757,7 +13756,7 @@ function addRouteRecord (
 
 function compileRouteRegex (path, pathToRegexpOptions) {
   var regex = pathToRegexp_1(path, [], pathToRegexpOptions);
-  if (true) {
+  if (false) {
     var keys = Object.create(null);
     regex.keys.forEach(function (key) {
       warn(!keys[key.name], ("Duplicate param keys in route with path: \"" + path + "\""));
@@ -13800,7 +13799,7 @@ function normalizeLocation (
     } else if (current.matched.length) {
       var rawPath = current.matched[current.matched.length - 1].path;
       next.path = fillParams(rawPath, params, ("path " + (current.path)));
-    } else if (true) {
+    } else if (false) {
       warn(false, "relative params navigation requires a current route.");
     }
     return next
@@ -13864,7 +13863,7 @@ function createMatcher (
 
     if (name) {
       var record = nameMap[name];
-      if (true) {
+      if (false) {
         warn(record, ("Route with name '" + name + "' does not exist"));
       }
       if (!record) { return _createRoute(null, location) }
@@ -13916,7 +13915,7 @@ function createMatcher (
     }
 
     if (!redirect || typeof redirect !== 'object') {
-      if (true) {
+      if (false) {
         warn(
           false, ("invalid redirect option: " + (JSON.stringify(redirect)))
         );
@@ -13937,7 +13936,7 @@ function createMatcher (
     if (name) {
       // resolved named direct
       var targetRecord = nameMap[name];
-      if (true) {
+      if (false) {
         assert(targetRecord, ("redirect failed: named route \"" + name + "\" not found."));
       }
       return match({
@@ -13960,7 +13959,7 @@ function createMatcher (
         hash: hash
       }, undefined, location)
     } else {
-      if (true) {
+      if (false) {
         warn(false, ("invalid redirect option: " + (JSON.stringify(redirect))));
       }
       return _createRoute(null, location)
@@ -14065,7 +14064,7 @@ function handleScroll (
     return
   }
 
-  if (true) {
+  if (false) {
     assert(typeof behavior === 'function', "scrollBehavior must be a function");
   }
 
@@ -14082,7 +14081,7 @@ function handleScroll (
       shouldScroll.then(function (shouldScroll) {
         scrollToPosition((shouldScroll), position);
       }).catch(function (err) {
-        if (true) {
+        if (false) {
           assert(false, err.toString());
         }
       });
@@ -14272,7 +14271,7 @@ function resolveAsyncComponents (matched) {
 
         var reject = once(function (reason) {
           var msg = "Failed to resolve async component " + key + ": " + reason;
-          "development" !== 'production' && warn(false, msg);
+          "production" !== 'production' && warn(false, msg);
           if (!error) {
             error = isError(reason)
               ? reason
@@ -14962,7 +14961,7 @@ var VueRouter = function VueRouter (options) {
       this.history = new AbstractHistory(this, options.base);
       break
     default:
-      if (true) {
+      if (false) {
         assert(false, ("invalid mode: " + mode));
       }
   }
@@ -14985,7 +14984,7 @@ prototypeAccessors.currentRoute.get = function () {
 VueRouter.prototype.init = function init (app /* Vue component instance */) {
     var this$1 = this;
 
-  "development" !== 'production' && assert(
+  "production" !== 'production' && assert(
     install.installed,
     "not installed. Make sure to call `Vue.use(VueRouter)` " +
     "before creating root instance."
@@ -15333,203 +15332,13 @@ exports.SubjectSubscription = SubjectSubscription;
 
 /***/ }),
 /* 15 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-// shim for using process in browser
-var process = module.exports = {};
-
-// cached from whatever global is present so that test runners that stub it
-// don't break things.  But we need to wrap it in a try catch in case it is
-// wrapped in strict mode code which doesn't define any globals.  It's inside a
-// function because try/catches deoptimize in certain engines.
-
-var cachedSetTimeout;
-var cachedClearTimeout;
-
-function defaultSetTimout() {
-    throw new Error('setTimeout has not been defined');
-}
-function defaultClearTimeout () {
-    throw new Error('clearTimeout has not been defined');
-}
-(function () {
-    try {
-        if (typeof setTimeout === 'function') {
-            cachedSetTimeout = setTimeout;
-        } else {
-            cachedSetTimeout = defaultSetTimout;
-        }
-    } catch (e) {
-        cachedSetTimeout = defaultSetTimout;
-    }
-    try {
-        if (typeof clearTimeout === 'function') {
-            cachedClearTimeout = clearTimeout;
-        } else {
-            cachedClearTimeout = defaultClearTimeout;
-        }
-    } catch (e) {
-        cachedClearTimeout = defaultClearTimeout;
-    }
-} ())
-function runTimeout(fun) {
-    if (cachedSetTimeout === setTimeout) {
-        //normal enviroments in sane situations
-        return setTimeout(fun, 0);
-    }
-    // if setTimeout wasn't available but was latter defined
-    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
-        cachedSetTimeout = setTimeout;
-        return setTimeout(fun, 0);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedSetTimeout(fun, 0);
-    } catch(e){
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
-            return cachedSetTimeout.call(null, fun, 0);
-        } catch(e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
-            return cachedSetTimeout.call(this, fun, 0);
-        }
-    }
-
-
-}
-function runClearTimeout(marker) {
-    if (cachedClearTimeout === clearTimeout) {
-        //normal enviroments in sane situations
-        return clearTimeout(marker);
-    }
-    // if clearTimeout wasn't available but was latter defined
-    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
-        cachedClearTimeout = clearTimeout;
-        return clearTimeout(marker);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedClearTimeout(marker);
-    } catch (e){
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
-            return cachedClearTimeout.call(null, marker);
-        } catch (e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
-            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
-            return cachedClearTimeout.call(this, marker);
-        }
-    }
-
-
-
-}
-var queue = [];
-var draining = false;
-var currentQueue;
-var queueIndex = -1;
-
-function cleanUpNextTick() {
-    if (!draining || !currentQueue) {
-        return;
-    }
-    draining = false;
-    if (currentQueue.length) {
-        queue = currentQueue.concat(queue);
-    } else {
-        queueIndex = -1;
-    }
-    if (queue.length) {
-        drainQueue();
-    }
-}
-
-function drainQueue() {
-    if (draining) {
-        return;
-    }
-    var timeout = runTimeout(cleanUpNextTick);
-    draining = true;
-
-    var len = queue.length;
-    while(len) {
-        currentQueue = queue;
-        queue = [];
-        while (++queueIndex < len) {
-            if (currentQueue) {
-                currentQueue[queueIndex].run();
-            }
-        }
-        queueIndex = -1;
-        len = queue.length;
-    }
-    currentQueue = null;
-    draining = false;
-    runClearTimeout(timeout);
-}
-
-process.nextTick = function (fun) {
-    var args = new Array(arguments.length - 1);
-    if (arguments.length > 1) {
-        for (var i = 1; i < arguments.length; i++) {
-            args[i - 1] = arguments[i];
-        }
-    }
-    queue.push(new Item(fun, args));
-    if (queue.length === 1 && !draining) {
-        runTimeout(drainQueue);
-    }
-};
-
-// v8 likes predictible objects
-function Item(fun, array) {
-    this.fun = fun;
-    this.array = array;
-}
-Item.prototype.run = function () {
-    this.fun.apply(null, this.array);
-};
-process.title = 'browser';
-process.browser = true;
-process.env = {};
-process.argv = [];
-process.version = ''; // empty string to avoid regexp issues
-process.versions = {};
-
-function noop() {}
-
-process.on = noop;
-process.addListener = noop;
-process.once = noop;
-process.off = noop;
-process.removeListener = noop;
-process.removeAllListeners = noop;
-process.emit = noop;
-process.prependListener = noop;
-process.prependOnceListener = noop;
-
-process.listeners = function (name) { return [] }
-
-process.binding = function (name) {
-    throw new Error('process.binding is not supported');
-};
-
-process.cwd = function () { return '/' };
-process.chdir = function (dir) {
-    throw new Error('process.chdir is not supported');
-};
-process.umask = function() { return 0; };
+module.exports = __webpack_require__(16);
 
 
 /***/ }),
 /* 16 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(17);
-
-
-/***/ }),
-/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15547,7 +15356,7 @@ __webpack_require__(42);
 
 
 /***/ }),
-/* 18 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = Function.prototype.apply;
@@ -15600,13 +15409,13 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(19);
+__webpack_require__(18);
 exports.setImmediate = setImmediate;
 exports.clearImmediate = clearImmediate;
 
 
 /***/ }),
-/* 19 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -15796,7 +15605,197 @@ exports.clearImmediate = clearImmediate;
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5), __webpack_require__(15)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5), __webpack_require__(19)))
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports) {
+
+// shim for using process in browser
+var process = module.exports = {};
+
+// cached from whatever global is present so that test runners that stub it
+// don't break things.  But we need to wrap it in a try catch in case it is
+// wrapped in strict mode code which doesn't define any globals.  It's inside a
+// function because try/catches deoptimize in certain engines.
+
+var cachedSetTimeout;
+var cachedClearTimeout;
+
+function defaultSetTimout() {
+    throw new Error('setTimeout has not been defined');
+}
+function defaultClearTimeout () {
+    throw new Error('clearTimeout has not been defined');
+}
+(function () {
+    try {
+        if (typeof setTimeout === 'function') {
+            cachedSetTimeout = setTimeout;
+        } else {
+            cachedSetTimeout = defaultSetTimout;
+        }
+    } catch (e) {
+        cachedSetTimeout = defaultSetTimout;
+    }
+    try {
+        if (typeof clearTimeout === 'function') {
+            cachedClearTimeout = clearTimeout;
+        } else {
+            cachedClearTimeout = defaultClearTimeout;
+        }
+    } catch (e) {
+        cachedClearTimeout = defaultClearTimeout;
+    }
+} ())
+function runTimeout(fun) {
+    if (cachedSetTimeout === setTimeout) {
+        //normal enviroments in sane situations
+        return setTimeout(fun, 0);
+    }
+    // if setTimeout wasn't available but was latter defined
+    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+        cachedSetTimeout = setTimeout;
+        return setTimeout(fun, 0);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedSetTimeout(fun, 0);
+    } catch(e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+            return cachedSetTimeout.call(null, fun, 0);
+        } catch(e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+            return cachedSetTimeout.call(this, fun, 0);
+        }
+    }
+
+
+}
+function runClearTimeout(marker) {
+    if (cachedClearTimeout === clearTimeout) {
+        //normal enviroments in sane situations
+        return clearTimeout(marker);
+    }
+    // if clearTimeout wasn't available but was latter defined
+    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+        cachedClearTimeout = clearTimeout;
+        return clearTimeout(marker);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedClearTimeout(marker);
+    } catch (e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+            return cachedClearTimeout.call(null, marker);
+        } catch (e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+            return cachedClearTimeout.call(this, marker);
+        }
+    }
+
+
+
+}
+var queue = [];
+var draining = false;
+var currentQueue;
+var queueIndex = -1;
+
+function cleanUpNextTick() {
+    if (!draining || !currentQueue) {
+        return;
+    }
+    draining = false;
+    if (currentQueue.length) {
+        queue = currentQueue.concat(queue);
+    } else {
+        queueIndex = -1;
+    }
+    if (queue.length) {
+        drainQueue();
+    }
+}
+
+function drainQueue() {
+    if (draining) {
+        return;
+    }
+    var timeout = runTimeout(cleanUpNextTick);
+    draining = true;
+
+    var len = queue.length;
+    while(len) {
+        currentQueue = queue;
+        queue = [];
+        while (++queueIndex < len) {
+            if (currentQueue) {
+                currentQueue[queueIndex].run();
+            }
+        }
+        queueIndex = -1;
+        len = queue.length;
+    }
+    currentQueue = null;
+    draining = false;
+    runClearTimeout(timeout);
+}
+
+process.nextTick = function (fun) {
+    var args = new Array(arguments.length - 1);
+    if (arguments.length > 1) {
+        for (var i = 1; i < arguments.length; i++) {
+            args[i - 1] = arguments[i];
+        }
+    }
+    queue.push(new Item(fun, args));
+    if (queue.length === 1 && !draining) {
+        runTimeout(drainQueue);
+    }
+};
+
+// v8 likes predictible objects
+function Item(fun, array) {
+    this.fun = fun;
+    this.array = array;
+}
+Item.prototype.run = function () {
+    this.fun.apply(null, this.array);
+};
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+process.versions = {};
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+process.prependListener = noop;
+process.prependOnceListener = noop;
+
+process.listeners = function (name) { return [] }
+
+process.binding = function (name) {
+    throw new Error('process.binding is not supported');
+};
+
+process.cwd = function () { return '/' };
+process.chdir = function (dir) {
+    throw new Error('process.chdir is not supported');
+};
+process.umask = function() { return 0; };
+
 
 /***/ }),
 /* 20 */
